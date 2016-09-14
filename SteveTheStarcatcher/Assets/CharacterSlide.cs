@@ -16,6 +16,7 @@ public class CharacterSlide : MonoBehaviour {
             i++;
             yield return new WaitForSeconds(slideTime);
         }
+        
     }
 
 	// Use this for initialization
