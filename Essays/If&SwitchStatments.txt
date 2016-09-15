@@ -1,0 +1,6 @@
+If statements are good when you need a certain condition to be met before a code can be initialized. 
+An if-else statement is good to basically say "If a condition is like this, do this. Otherwise, here's an alternative".
+
+A switch statements need a variable passed into them, and it can only be within the same function as the switch statement.
+They involved "cases", and have to be broken with a break;
+Default in a switch statement is like the "else" statement in an if-else statement. This will also need a break;
