@@ -2,4 +2,5 @@ Functions/Methods will take in information and will return values or any kind of
 The one exception are void functions; they do not return a value.
 
 Functions must be given a date type, which reflects the kind of value that the function will return.
-If you want a function to "work", you must call it somehow in the code in order for it to work. 
+If you want a function to "work", you must call it somehow in the code in order for it to work. \
+
