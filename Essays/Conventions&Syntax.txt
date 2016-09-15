@@ -1,0 +1,5 @@
+The syntax is the structure of the language, and conventions are important to read and create the code. 
+It works in a heirarchical system. In the dot operator, the first word is like a general subject, then the dot incidates something from within that general subject.
+The semicolon in C# will indicate when a line of code will end. This is usually used for basic lines of codes, but for some cases, like methods and statements, a semicolon is not needed.
+
+Other forms of syntax are indenting (which is usually done automatically; there are cases where you're own personal indentation is necessary) and comments.
