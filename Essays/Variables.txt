@@ -1,0 +1,4 @@
+The type of variables can be integers (int), floats (float), strings (string), and more.
+Following the type of variable you name it and assign a reference to it. 
+Then you can assign a value to the variable.
+You initialize the variable globally, but you can change it the value in a function if need be.
