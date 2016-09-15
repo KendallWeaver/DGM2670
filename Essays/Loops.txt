@@ -1,0 +1,8 @@
+Loops are a good trick to use if you want to repeat lines of code. A while loop will continue the code as long as a condition is met.
+When it is not met, it will not continue.
+A do-while loop is similar, except it will be testing the condition near the end. It will run at least once, no matter what.
+do-while loops will have a semicolon after a while statement.
+For loop has three sections, one being optional where you initialize a variable, but it's usually used, the next is the condition, and then the last is optional again, where you increment/decrement the first initialized variable
+Foreach is good for arrays. It will run "for each" value in an array.
+
+Also, if you completely fail at coding like I do, you can cause Unity to freeze if you do not do loops correctly.
