@@ -1,0 +1,13 @@
+Scope is the area where a variable can be used. Brackets are a good indicator where a variable is located.
+If a variable is within the class but not in a function, it's a global variable within the class. Inside a function it is local to that function.
+The video puts it in terms of a variable outside of a function being in the scope of the class, and the variables in the function are in scope in a function.
+
+Public modifiers can be accessed outside of the class, while private can only be accessed within the class.
+
+Public variables can be accessed in the inspector and can be changed accordingly. This can be useful if you're trying to find the right value you're looking
+for while playing. However, if you create a default value in the start function, it will reset to that. Even so, after the start function has been initialized,
+you can then change the value.
+
+If you initialize another class in a separate script, that script can now access the public variables in the other script, as long as they are called properly.
+
+ 
