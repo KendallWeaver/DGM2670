@@ -1,0 +1,17 @@
+Arrays can store data together that the same type, like integers or strings.
+After the type, you need to use brackets. Next is the name of the array, 
+and it will equal a new type with the number of elements that will be in that array in brackets.
+The index of the element starts at zero.
+You must initialize your array, which can be done in the start function, or
+when you're setting your array in the global area, equal it to {some, kind, of, values}.
+(yes I'm stretching a bit).
+You can use unity to store Game Objects into arrays. Arrays can also be accessed in loops.
+
+To use lists, you will need to add Systems.Collections.Generic at the beginning of your code.
+According to the video, a list "is the generic class". You will need to put the class name after the modifiers, and then a type.
+
+You must add to the list with using the .Add. You can access the list similarly to how you do an array.
+Lists can be altered manually with functions.
+
+Lists are used instead of an array when more functionality is required.
+
