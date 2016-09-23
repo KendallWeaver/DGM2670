@@ -1,0 +1,12 @@
+Inheritance is vital to Object oriented programming. The "parent" is the base class, and the "child" is the inherit class.
+Anything in the parent class will be able to be accessed by the child class, but the parent won't be able to access classes
+in the child class.
+
+The three accecss modifiers you should be concerned about are public, protected, and private. Similarly to what you learned
+before, public variables will be accessable by a child class.
+Protected is interesting as it is able to be accessed by the child class, but it cannot be accessed outside of the two classes.
+
+Your scripts will inherit from MonoBehavior, especially since a lot of parameters like GameObject and transform will be able 
+to be accessed.
+
+Inhertiance amongst scripts is similar to a heirarchial system.
