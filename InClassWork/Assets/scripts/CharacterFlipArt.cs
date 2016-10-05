@@ -1,30 +1,45 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterFlipArt : MonoBehaviour {
+public class CharacterFlipArt : MonoBehaviour
+{
 
     public Transform characterArt;
 
     public bool forward = true;
 
-    void FlipCharacter (bool _b)
+    void FlipCharacter(KeyCode _keyCode)
     {
-        characterArt.Rotate(0,0,180);
-        forward = _b;
+        switch (_keyCode)
+        {
+            case KeyCode.RightArrow:
+                if (forward)
+                {
+                    characterArt.Rotate(0, 0, 180);
+                    forward = false;
+                }
+                break;
+
+            case KeyCode.LeftArrow:
+                if (!forward)
+                {
+                    characterArt.Rotate(0, 0, 180);
+                    forward = true;
+                }
+                break;
+        }
+
+
     }
 
-
-	// Update is called once per frame
-	void Update ()
+    void StopScript()
     {
-	    if(Input.GetKeyDown(KeyCode.RightArrow) && forward)
-        {
-            FlipCharacter(false);
-        }
+        UserInput.UserInputs -= FlipCharacter;
+    }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && !forward)
-        {
-            FlipCharacter(true);
-        }
-	}
+    void Start()
+    {
+        UserInput.UserInputs+=FlipCharacter;
+    }
+
 }
