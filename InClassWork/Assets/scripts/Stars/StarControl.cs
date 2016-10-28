@@ -14,6 +14,7 @@ public class StarControl : MonoBehaviour {
     private Vector3 forceVector;
     private float force;
     public float forceRange = 30;
+    private Animator anims;
 
     private Vector3 tortVector;
 
@@ -24,6 +25,7 @@ public class StarControl : MonoBehaviour {
     
     void Start()
     {
+        anims = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         StartCoroutine(RunRandomForce());
     }
@@ -43,9 +45,19 @@ public class StarControl : MonoBehaviour {
         }
     }
 
+    public void Deactivate()
+    {
+        anims.SetBool("Destroy", false);
+        gameObject.SetActive(false);
+    }
+
 	void OnCollisionEnter ()
     {
-        Destroy(gameObject, endTime);
+        anims.SetBool("Destroy", true);
+
+        //gameObject.SetActive(false);
+        
+        //Destroy(gameObject, endTime);
     }
 	
 }

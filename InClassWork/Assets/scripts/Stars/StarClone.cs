@@ -4,11 +4,12 @@ using System.Collections;
 public class StarClone : MonoBehaviour {
 
     public Transform[] spawnPoints;
-    public Transform star;
+    public GameObject[] stars;
     public float spawnFrequency = 1;
     public bool canSpawnStars = true;
 
     private int i = 0;
+    private int j = 0;
 
     IEnumerator SpawnStars()
     {
@@ -16,7 +17,19 @@ public class StarClone : MonoBehaviour {
         {
             // This randomizes the value of i
             i = Random.Range(0, spawnPoints.Length - 1);
-            Instantiate(star, spawnPoints[i].position, Quaternion.identity);
+            stars[j].SetActive(true);
+            stars[j].transform.position = spawnPoints[i].position;
+
+
+            if (j<stars.Length)
+            {
+                j++;
+            }
+            else
+            {
+                j = 0;
+            }
+            // Instantiate(star, spawnPoints[i].position, Quaternion.identity);
             yield return new WaitForSeconds(spawnFrequency);
             
         }
