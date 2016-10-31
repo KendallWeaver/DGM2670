@@ -1,63 +1,62 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class StarControl : MonoBehaviour {
 
-    public float endTime = 3;
+    public List<Transform> spawners;
+    public List<Transform> stars; 
 
-    public int forcetime = 2;
-
-    private bool canAddForce = true;
-    public float forceDuration = 0.1f;
-
-    private Rigidbody rigid;
-    private Vector3 forceVector;
-    private float force;
-    public float forceRange = 30;
-    private Animator anims;
-
-    private Vector3 tortVector;
-
-    //IEnumerator EndStar()
-    //{
-    //    yield return new WaitForSeconds(endTime);
-    //}
-    
-    void Start()
+    void SpawnHandler(Transform _t)
     {
-        anims = GetComponent<Animator>();
-        rigid = GetComponent<Rigidbody>();
-        StartCoroutine(RunRandomForce());
+        spawners.Add(_t);
     }
 
-    IEnumerator RunRandomForce()
+    void StarHandler(Transform _t)
     {
-        force = Random.Range(-forceRange, forceRange);
-        while(forcetime > 0)
-        {
+        stars.Add(_t);
+    }
 
-            yield return new WaitForSeconds(forceDuration);
-            forceVector.x = force;
-            tortVector.z = force/force;
-            rigid.AddTorque(tortVector);
-            rigid.AddForce(forceVector);
-            forcetime--;
+    void Start()
+    {
+        StarSpawner.SendSpawner += SpawnHandler;
+        Star.SendStar += StarHandler;
+
+        if(stars != null || spawners != null)
+            StartCoroutine(Spawn());
+    }
+
+    private bool canSpawn = true;
+
+    private int starNum;
+    private int spawnerNum;
+
+    IEnumerator Spawn()
+    {
+        while (canSpawn)
+        {
+            yield return new WaitForSeconds(1);
+            stars[starNum].position = spawners[spawnerNum].position;
+            stars[starNum].GetComponent <MeshRenderer>().enabled = true;
+            if(starNum < stars.Count - 1)
+            {
+                starNum++;
+            }
+            else
+            {
+                starNum = 0;
+            }
+
+            if (spawnerNum < spawners.Count - 1)
+            {
+                spawnerNum++;
+            }
+            else
+            {
+                starNum = 0;
+            }
+
         }
     }
 
-    public void Deactivate()
-    {
-        anims.SetBool("Destroy", false);
-        gameObject.SetActive(false);
-    }
-
-	void OnCollisionEnter ()
-    {
-        anims.SetBool("Destroy", true);
-
-        //gameObject.SetActive(false);
-        
-        //Destroy(gameObject, endTime);
-    }
-	
 }
