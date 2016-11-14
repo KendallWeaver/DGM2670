@@ -15,3 +15,14 @@ Use of Static Functions
 2 For Loops
 2 Foreach Loops
 3 Attributes
+
+
+DON'T DO THIS:
+Scripts repeat without the use of functions or loops
+Update more that once in the game
+GameObject.Find or any related, or similar Methods
+The use of “else if” more that once in an if statement rather than a switch statement
+The use of tags instead of layers
+Instantiate 
+Destroy
+RayCasting or any related or similar Methods
