@@ -2,8 +2,7 @@
 using System.Collections;
 using System;
 
-public class EnemyAttack : MonoBehaviour, IAttack, IDamage {
-
+public class ShipBase : MonoBehaviour, IDamage, IAttack {
 
     public void Attack()
     {
@@ -16,11 +15,11 @@ public class EnemyAttack : MonoBehaviour, IAttack, IDamage {
     }
 
     // Use this for initialization
-    void Start ()
+    public virtual void Start ()
     {
         Attack();
         Damage();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
