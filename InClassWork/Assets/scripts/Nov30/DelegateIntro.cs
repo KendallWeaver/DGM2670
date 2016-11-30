@@ -8,10 +8,18 @@ public class DelegateIntro : MonoBehaviour {
     public static Action MyEvent;
 
 
-    //
+    /*
     public delegate void DelWithArgs(string _s);
     public static DelWithArgs EventWithArgs;
-
+    */
+    //This is a better way to write it
+    public static Action<string> EventWithArgs;
+    /*
+    public delegate string DelString();
+    public static DelString EventString;
+    */
+    public static Func<string> EventString;
+    // Func is a delegate with a return type
 
 	// Use this for initialization
 	void Start ()
@@ -21,6 +29,8 @@ public class DelegateIntro : MonoBehaviour {
             MyEvent();
 
         EventWithArgs("Hello World");
+
+        print (EventString());
 	}
 	
 
