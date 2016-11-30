@@ -21,9 +21,11 @@ public class DelegateIntro : MonoBehaviour {
     public static Func<string> EventString;
     // Func is a delegate with a return type
 
-    public delegate string DelReturnArgs(string s);
-    public static DelReturnArgs EventReturnArgs;
-
+    /*
+public delegate string DelReturnArgs(string s);
+public static DelReturnArgs EventReturnArgs;
+    */
+    public static Func<string, string> EventReturnArgs;
 	// Use this for initialization
 	void Start ()
     {
