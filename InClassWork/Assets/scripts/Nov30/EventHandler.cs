@@ -12,6 +12,8 @@ public class EventHandler : MonoBehaviour {
         DelegateIntro.EventWithArgs += EventWithArgsHandler;
 
         DelegateIntro.EventString += EventStringHandler;
+
+        DelegateIntro.EventReturnArgs += EventReturnArgsHandler;
 	}
 
     // function that................. i dunoo
@@ -29,5 +31,10 @@ public class EventHandler : MonoBehaviour {
     {
         print("Do you like life?");
         return "I hate life";
+    }
+
+    private string EventReturnArgsHandler(string s)
+    {
+        return "The animal I hate the most is " + s;
     }
 }

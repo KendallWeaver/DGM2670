@@ -21,16 +21,23 @@ public class DelegateIntro : MonoBehaviour {
     public static Func<string> EventString;
     // Func is a delegate with a return type
 
+    public delegate string DelReturnArgs(string s);
+    public static DelReturnArgs EventReturnArgs;
+
 	// Use this for initialization
 	void Start ()
     {
         // this if statement is here to only have the delegate run if something is there; deleting the cube will cause this not to run
         if(MyEvent != null)
             MyEvent();
-
+        //
         EventWithArgs("Hello World");
-
+        //
         print (EventString());
+
+        //
+        string data = EventReturnArgs("cat");
+        print(data);
 	}
 	
 
