@@ -9,11 +9,18 @@ public class EventHandler : MonoBehaviour {
 
         // function added to the event
         DelegateIntro.MyEvent += MyEventHandler;
+
+        DelegateIntro.EventWithArgs += EventWithArgsHandler;
 	}
 
     // function that................. i dunoo
     private void MyEventHandler()
     {
         print("Ran");
+    }
+
+    private void EventWithArgsHandler(string _s)
+    {
+        print(_s);
     }
 }
