@@ -9,7 +9,7 @@ public class MoreHandlers : MonoBehaviour
     {
         DelegateIntro.EventString += ES;
         DelegateIntro.MyEvent += ME;
-        DelegateIntro.EventWithArgs += EA;
+       // DelegateIntro.EventWithArgs += EA;
         DelegateIntro.EventReturnArgs += ER;
     }
 
