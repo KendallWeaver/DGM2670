@@ -1,1 +1,8 @@
 I wanna do a choice based game. Just in the console.
+
+
+1. What path should you take
+	1a Left
+	1b Right
+	1c Check Items
+		Go back to 1.
