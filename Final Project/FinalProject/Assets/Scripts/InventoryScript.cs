@@ -25,4 +25,10 @@ public class InventoryScript : MainScriptWithUpdate
         item = "Stick of Gum";
         return item;
     }
+
+    public void UseDonut()
+    {
+        print("You ate the donut. You're glad that it's still good and not made of spiders.");
+        inventory.Remove("Donut");
+    }
 }
