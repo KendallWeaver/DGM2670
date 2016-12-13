@@ -1,26 +1,28 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿// Purpose of this script is suppose to be the main location for anything related to the inventory, including items you may find
+public class InventoryScript : MainScriptWithUpdate
+{
 
-public class InventoryScript : MonoBehaviour {
+    // Script that is used in the MainScriptWithUpdate to collect item
+    /* print("You got a " + InventoryScript.MethodName(item));
+       inventory.Add(InventoryScript.Method(item));
 
-    //public string[] inventory = {"Stick", "Band-aid", "Donut"};
-    public List<string> theInventoryList = new List<string>();
+           OR
 
-    void Start()
+       print("You got a " + gotItem.MethodName(item));
+       inventory.Add(gotItem.Method(item));
+       */
+
+    // call this when the artifact is found
+    internal static string GotArtifact(string item)
     {
-        theInventoryList.Add("Stick");
-        theInventoryList.Add("Bandana");
-        theInventoryList.Add("Donut");
+        item = "Weird Artifact";
+        return item;
     }
-    
-    /*
-    public List<string> PlayerInventory()
-    {
-        foreach (string item in theInventoryList)
-        {
-            return item;
-        }
-    }*/
 
+    // call this when gum is found
+    internal static string GotGum(string item)
+    {
+        item = "Stick of Gum";
+        return item;
+    }
 }
