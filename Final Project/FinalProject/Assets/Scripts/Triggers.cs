@@ -5,8 +5,11 @@ public class Triggers : MonoBehaviour
 {
     // AS A NOTE: All bools start as "false"
 
-        // figure this out laterrrrr
+    
+
+    // frequently reused bools
     public bool cutscene;
+    public bool invInUse;
 
     // First choices
     public bool firstChoice = true;
@@ -14,7 +17,7 @@ public class Triggers : MonoBehaviour
     public bool rightPath; // Go to 2b
 
     // 2a: Player encounters a scary noise
-    public bool approachNoise; // if they approach, go to 2a.a. If not, go to 2a.b
+    public bool approachNoise; // if they approach, go to 2a.a. If not, go to 2a.a.b
 
     // 2b: Suddenly Shia LeBouf!
     public bool shiaLeBouf; 
@@ -29,7 +32,8 @@ public class Triggers : MonoBehaviour
 
     // 2a.a.b: A MONSTER!
     public bool monster;
-    public bool victory; // Did they win? If yes, WIN. If no, DEATH
+    public bool victory; // Did they win? 
+    public bool death;
 
     // 3a: Shia LeBouf warns you to hide
     public bool treeRoot; // Go to 3a.a

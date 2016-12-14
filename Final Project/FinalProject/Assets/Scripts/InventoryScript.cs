@@ -1,4 +1,6 @@
 ﻿// Purpose of this script is suppose to be the main location for anything related to the inventory, including items you may find
+using System;
+
 public class InventoryScript : MainScriptWithUpdate
 {
 
@@ -26,9 +28,19 @@ public class InventoryScript : MainScriptWithUpdate
         return item;
     }
 
-    public void UseDonut()
+    internal static void UseDonut()
     {
         print("You ate the donut. You're glad that it's still good and not made of spiders.");
-        inventory.Remove("Donut");
     }
+
+    internal static void UseStick()
+    {
+        print("You threw the stick. It did not come back.");
+    }
+
+    internal static void WearBandana()
+    {
+        print("You put the bandana on your head. Now you feel manly.");
+    }
+
 }

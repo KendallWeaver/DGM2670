@@ -1,18 +1,18 @@
 4 Action delegates, 3 passing data
-4 coroutines
+4 coroutines (DONE)
 2 Instances of Inheritance 
-2 Instances of interfaces
-3 Uses of Polymorphism
+2 Instances of interfaces (DONE)
+3 Uses of Polymorphism (???)
 5 different Mono Behaviors
-2 lists using Add() and other methods
-Use of Functions that Return values
-Use of Functions with parameters
-Use of Static Variables
-Use of Static Functions 
-2 Switch Statements
+2 lists using Add() and other methods (1/2)
+Use of Functions that Return values (DONE)
+Use of Functions with parameters (DONE)
+Use of Static Variables (1/2??)
+Use of Static Functions (DONE)
+2 Switch Statements (1/2)
 2 Whiles loops
 2 For Loops
-2 Foreach Loops
+2 Foreach Loops (1/2)
 
 
 
