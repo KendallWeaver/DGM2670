@@ -40,6 +40,7 @@ public class MainScriptWithUpdate : MonoBehaviour
 
     //initializing inventory
     public List<string> inventory;
+
     // initializing party member list
     public List<string> partyMem;
 
