@@ -28,7 +28,8 @@ public class Triggers : MonoBehaviour
     public bool explore; // If they explore, go to 2.a.b. If not, go to 2.a.a
 
     // 2a.a.a: Finds a hidden artifact
-    public bool artifact; // The artifact is needed to beat the monster. Go to 2.a.a.
+    public bool artifact;
+    public bool useArtifact; // The artifact is needed to beat the monster. Go to 2.a.a.
 
     // 2a.a.b: A MONSTER!
     public bool monster;
@@ -37,12 +38,11 @@ public class Triggers : MonoBehaviour
 
     // 3a: Shia LeBouf warns you to hide
     public bool treeRoot; // Go to 3a.a
-    public bool cave;   // Go to 3a.b
+    public bool cave;   // death becomes true
 
     // 3a.a: Shia LeBouf Sacrificed himself to save you. You happen upon a fence.
     public bool climbFence; // FENCE WIN
     public bool findGate; // The monster that killed Shia LeBouf kills you.
-
 
     // Extra
     public bool timesUp;
