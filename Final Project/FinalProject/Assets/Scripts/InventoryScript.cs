@@ -14,6 +14,7 @@ public class InventoryScript : MainScriptWithUpdate, IDamage<int>, IAttack
        inventory.Add(gotItem.Method(item));
        */
 
+    // I had hope to actually have the player damage the monster, but unfortunately I couldn't figure out how to get it to work within static functions.
     public void Damage(int _d)
     {
         

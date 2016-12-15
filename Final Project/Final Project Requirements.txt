@@ -11,7 +11,7 @@ Use of Static Variables (DONE?)
 Use of Static Functions (DONE)
 2 Switch Statements (DONE)
 2 Whiles loops (DONE)
-2 For Loops
+2 For Loops (FORGOT TO DO, BUT I KNOW HOW TO DO IT)
 2 Foreach Loops (1/2)
 
 

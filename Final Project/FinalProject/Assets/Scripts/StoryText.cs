@@ -262,6 +262,7 @@ public class StoryText : ReturnToChoicesCoroutines
         triggerScript.cutscene = true;
         print("You've seen enough Indiana Jones movies to know what's in there.");
         yield return new WaitForSeconds(p);
+        triggerScript.approachNoise = false;
         print("Besides, you need to get home.");
         yield return new WaitForSeconds(p);
         print("There's no time for a detour.");
